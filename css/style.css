@@ -44,7 +44,8 @@ body {
 
 img {
   display: block;
-  max-inline-size: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -58,4 +59,86 @@ p {
   inline-size: min(100%, var(--container-width));
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.hero {
+  padding-block: var(--section-spacing);
+  background: var(--color-background);
+}
+
+.hero__layout {
+  display: grid;
+  gap: var(--content-gap);
+  align-items: center;
+}
+
+.hero__content {
+  display: grid;
+  gap: 1.25rem;
+  min-inline-size: 0;
+}
+
+.hero__eyebrow {
+  margin: 0;
+
+  color: var(--color-accent);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.hero__title {
+  margin: 0;
+
+  font-size: clamp(2.4rem, 10vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.hero__lead {
+  margin: 0;
+  max-inline-size: 36rem;
+
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  inline-size: fit-content;
+  min-block-size: 3rem;
+  padding-inline: 1.5rem;
+
+  color: #ffffff;
+  background: var(--color-accent);
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero__cta:hover {
+  background: var(--color-accent-hover);
+}
+
+.hero__cta:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 4px;
+}
+
+.hero__media {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-large);
+}
+
+.hero__media img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
