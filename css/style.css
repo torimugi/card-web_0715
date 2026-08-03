@@ -61,6 +61,7 @@ p {
   padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
+/* 390px版のメインビジュアル */
 .hero {
   padding-block: var(--section-spacing);
   background: var(--color-background);
@@ -141,4 +142,65 @@ p {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+}
+
+.features {
+  padding-block: var(--section-spacing);
+}
+
+.features__header {
+  margin-block-end: clamp(2rem, 5vw, 3.5rem);
+}
+
+.features__eyebrow {
+  margin-block-end: 0.5rem;
+
+  color: var(--color-accent);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.features__title {
+  margin: 0;
+
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--card-gap);
+}
+
+.feature-card {
+  overflow: hidden;
+
+  background: var(--color-surface);
+  border: 1px solid rgb(32 48 42 / 0.12);
+  border-radius: var(--radius-medium);
+}
+
+.feature-card__image {
+  inline-size: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.feature-card__body {
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.feature-card__title {
+  margin-block-end: 0.75rem;
+
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.feature-card__text {
+  margin: 0;
+  color: var(--color-muted);
 }
